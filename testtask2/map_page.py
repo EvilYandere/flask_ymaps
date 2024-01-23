@@ -12,7 +12,7 @@ import logging
 logging.basicConfig(filename='logs.log')    # логирование
 logger = logging.getLogger()
 map_page = Blueprint('map_page', __name__, template_folder='templates')  # blueprint
-api_key = '4dd3cbc3-f73e-445b-8343-2c16a0a1cecc'  # ключ разработчика для Yandex Геокодера
+api_key = 'some_api_key'  # ключ разработчика для Yandex Геокодера
 
 
 @map_page.route('/', methods=['GET', 'POST'])  # страница для ввода адреса
