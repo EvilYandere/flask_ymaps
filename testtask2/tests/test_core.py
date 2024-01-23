@@ -8,7 +8,7 @@ def test_home(client):
 
 @responses.activate
 def test_empty_address(client):
-    api_key = '4dd3cbc3-f73e-445b-8343-2c16a0a1cecc'
+    api_key = 'some_api_key'
     address = ''
     responses.add(
         responses.POST,
@@ -21,7 +21,7 @@ def test_empty_address(client):
 
 @responses.activate
 def test_wrong_address(client):
-    api_key = '4dd3cbc3-f73e-445b-8343-2c16a0a1cecc'
+    api_key = 'some_api_key'
     address = 'asdasjfaslkfjas;fjas;klf'
     responses.add(
         responses.POST,
@@ -33,7 +33,7 @@ def test_wrong_address(client):
 
 @responses.activate
 def test_out_of_mkad(client):
-    api_key = '4dd3cbc3-f73e-445b-8343-2c16a0a1cecc'
+    api_key = 'some_api_key'
     address = 'Саратов, площадь Ленина'
     client.get('/')
     responses.add(
@@ -47,7 +47,7 @@ def test_out_of_mkad(client):
 
 @responses.activate
 def test_out_of_mkad(client):
-    api_key = '4dd3cbc3-f73e-445b-8343-2c16a0a1cecc'
+    api_key = 'some_api_key'
     address = 'Москва, ЦНИИ туберкулёза'
     client.get('/')
     responses.add(
